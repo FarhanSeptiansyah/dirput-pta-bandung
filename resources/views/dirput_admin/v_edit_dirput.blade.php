@@ -25,10 +25,28 @@
                                 {{ $message }}
                                 @enderror
                             </div>
-                            <div class="mb-3 mt-2">
-                                <label class="mb-2 text-warning">PUTUSAN ANONIMASI</label>
-                                <div>{{ $dirput->putusan }}</div>
+                        </div>
+                        <div class="mb-3">
+                            <label class="mb-2 text-warning">JENIS PERKARA</label>
+                            <input type="text" class="form-control @error('j_perkara') is-invalid @enderror" value="{{$dirput->j_perkara}}" name="j_perkara">
+                            <div id="validationServerUsernameFeedback" class="invalid-feedback text-danger">
+                                @error('j_perkara')
+                                {{ $message }}
+                                @enderror
                             </div>
+                        </div>
+                        <div class="mb-3">
+                            <label class="mb-2 text-warning">TANGGAL PUTUS</label>
+                            <input type="date" class="form-control @error('tgl_put_banding') is-invalid @enderror" value="{{$dirput->tgl_put_banding}}" name="tgl_put_banding">
+                            <div id="validationServerUsernameFeedback" class="invalid-feedback text-danger">
+                                @error('tgl_put_banding')
+                                {{ $message }}
+                                @enderror
+                            </div>
+                        </div>
+                        <div class="mb-3 mt-2">
+                            <label class="mb-2 text-warning">PUTUSAN ANONIMASI</label>
+                            <div>{{ $dirput->putusan }}</div>
                         </div>
                         <div class="mb-3">
                             <label class="mb-2 text-warning">UBAH DOKUMEN PUTUSAN</label>

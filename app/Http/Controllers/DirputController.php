@@ -55,6 +55,8 @@ class DirputController extends Controller
 
         $data = [
             'no_banding' => Request()->no_banding,
+            'j_perkara' => Request()->j_perkara,
+            'tgl_put_banding' => Request()->tgl_put_banding,
             'putusan' => $fileName,
         ];
 
@@ -97,6 +99,8 @@ class DirputController extends Controller
 
             $data = [
                 'no_banding' => Request()->no_banding,
+                'j_perkara' => Request()->j_perkara,
+                'tgl_put_banding' => Request()->tgl_put_banding,
                 'putusan' => $fileName,
             ];
 
@@ -106,6 +110,8 @@ class DirputController extends Controller
             //upload file
             $data = [
                 'no_banding' => Request()->no_banding,
+                'j_perkara' => Request()->j_perkara,
+                'tgl_put_banding' => Request()->tgl_put_banding,
             ];
 
             $this->DirputModel->editData($id_dirput, $data);

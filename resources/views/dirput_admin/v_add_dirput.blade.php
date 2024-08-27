@@ -26,6 +26,24 @@
                             </div>
                         </div>
                         <div class="mb-3">
+                            <label class="mb-2 text-warning">JENIS PERKARA</label>
+                            <input type="text" class="form-control @error('j_perkara') is-invalid @enderror" value="{{old('j_perkara')}}" name="j_perkara">
+                            <div id="validationServerUsernameFeedback" class="invalid-feedback text-danger">
+                                @error('j_perkara')
+                                {{ $message }}
+                                @enderror
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label class="mb-2 text-warning">TANGGAL PUTUS</label>
+                            <input type="date" class="form-control @error('tgl_put_banding') is-invalid @enderror" value="{{old('tgl_put_banding')}}" name="tgl_put_banding">
+                            <div id="validationServerUsernameFeedback" class="invalid-feedback text-danger">
+                                @error('tgl_put_banding')
+                                {{ $message }}
+                                @enderror
+                            </div>
+                        </div>
+                        <div class="mb-3">
                             <label class="mb-2 text-warning">PUTUSAN ANONIMASI</label>
                             <input type="file" class="form-control @error('putusan') is-invalid @enderror" value="{{old('putusan')}}" name="putusan">
                             <div id="validationServerUsernameFeedback" class="invalid-feedback text-danger">

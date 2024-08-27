@@ -64,18 +64,29 @@
 						<tr>
 							<td class="text-center">{{$loop->iteration}}</td>
 							<td class="text-center"><span class="btn btn-sm btn-outline-light px-3 mb-2">{{ $data->no_banding }}</span></td>
-							<td class="text-center"><span class="btn btn-sm btn-outline-light px-3 mb-2">{{ $data->j_perkara }}</span></td>
+							<td class="text-center">
+								@if($data->j_perkara=="")
+								<i class="lni lni-ban text-danger"></i>
+
+								@elseif($data->j_perkara=="0000-00-00")
+								<i class="lni lni-ban text-danger"></i>
+
+								@else
+								<a href="/dirput-pta/dirput/{{$data->j_perkara}}" class="btn btn-sm btn-outline-light px-3 mb-2" target="_blank">
+									<span>{{ $data->j_perkara }}</span>
+								</a>
+								@endif
+							</td>
 							<td class="text-center">
 								@if($data->tgl_put_banding=="")
 								<i class="lni lni-ban text-danger"></i>
-								<span class="btn btn-sm btn-outline-danger px-3 mb-2"></span>
+
 								@elseif($data->tgl_put_banding=="0000-00-00")
 								<i class="lni lni-ban text-danger"></i>
-								<span class="btn btn-sm btn-outline-danger px-3 mb-2"></span>
+
 								@else
 								<a href="/dirput-pta/dirput/{{$data->tgl_put_banding}}" class="btn btn-sm btn-outline-light px-3 mb-2" target="_blank">
-									<i class="lni lni-cloud-download"></i>
-									<span>{{ $data->tgl_put_banding }}</span>
+									<span>{{ date('d-m-Y', strtotime($data->tgl_put_banding)) }}</span>
 								</a>
 								@endif
 							</td>
