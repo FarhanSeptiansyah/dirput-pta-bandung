@@ -2,8 +2,6 @@
 
 @section('content')
 
-
-
 <div class="panel panel-default container mt-5">
 
     @include('layouts.v_deskripsi-trans')

@@ -5,7 +5,7 @@
 				<img src="{{ asset('template')}}/img/logo-pta.png" class="user-img" alt="user avatar">
 			</a>
 			<ul class="dropdown-menu dropdown-menu-start">
-				<li><a class="dropdown-item" href="/dirput-pta/admin"><i class='bx bx-home-circle'></i><span>Halaman Admin</span></a>
+				<li><a class="dropdown-item" href=""><i class='bx bx-home-circle'></i><span>Login</span></a>
 				</li>
 			</ul>
 		</div>

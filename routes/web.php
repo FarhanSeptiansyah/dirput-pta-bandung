@@ -43,7 +43,6 @@ Route::post('/dirput-pta/admin/member/insert', [MemberController::class, 'insert
 Route::get('/dirput-pta/admin/member/edit/{id_dirput}', [MemberController::class, 'edit']);
 Route::post('/dirput-pta/admin/member/update/{id_dirput}', [MemberController::class, 'update']);
 Route::get('/dirput-pta/admin/member/delete/{id_dirput}', [MemberController::class, 'delete']);
-
 Route::get('/dirput-pta/admin/member/ppid', [MemberController::class, 'ppid']);
 
 Auth::routes();
