@@ -17,6 +17,8 @@ class TbDirput extends Migration
         Schema::create('tb_dirput', function (Blueprint $table) {
             $table->id();
             $table->string('no_banding')->Unique();
+            $table->string('j_perkara');
+            $table->date('putusan')->nullable();
             $table->string('putusan');
             $table->timestamps();
         });

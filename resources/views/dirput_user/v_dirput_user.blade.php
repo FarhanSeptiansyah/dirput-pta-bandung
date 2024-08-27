@@ -32,6 +32,19 @@
 				<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
 			</div>
 			@endif
+			<!-- <form method="GET" action="/filter">
+				<span>
+					<label>Start Date</label>
+					<input type="date" name="start_date" class="form-control">
+				</span>
+				<span>
+					<label>End Date</label>
+					<input type="date" name="end_date" class="form-control">
+				</span>
+				<span>
+					<button type="submit" class="btn btn-sm btn-outline-light px-3 mt-2 mb-2">FIlter</button>
+				</span>
+			</form> -->
 			<div class="card-body">
 				<div class="table-responsive">
 					<table id="example" class="table table-borderedless" style="width:100%">
@@ -39,6 +52,8 @@
 							<tr>
 								<th class="text-center" style="width: 10px;">NO</th>
 								<th class="text-center">NOMOR PERKARA BANDING</th>
+								<th class="text-center">JENIS PERKARA</th>
+								<th class="text-center">TANGGAL PUTUS</th>
 								<th class="text-center">PUTUSAN</th>
 								<th class="text-center">UPLOAD</th>
 								<!-- <th class="text-center" style="width: 150px;">ACTION</th> -->
@@ -48,6 +63,8 @@
 							<tr>
 								<th class="text-center">NO</th>
 								<th class="text-center">NOMOR PERKARA BANDING</th>
+								<th class="text-center">JENIS PERKARA</th>
+								<th class="text-center">TANGGAL PUTUS</th>
 								<th class="text-center">PUTUSAN</th>
 								<th class="text-center">UPLOAD</th>
 								<!-- <th class="text-center">ACTION</th> -->
@@ -56,7 +73,22 @@
 							@foreach ($dirput as $data)
 							<tr>
 								<td class="text-center">{{$loop->iteration}}</td>
-								<td class="text-center"><span class="btn btn-sm btn-outline-light px-3 mb-2">Putusan Pengadilan Tinggi Agama Bandung Nomor {{ $data->no_banding }}</span></td>
+								<td class="text-center"><span class="btn btn-sm btn-outline-light px-3 mb-2">{{ $data->no_banding }}</span></td>
+								<td class="text-center"><span class="btn btn-sm btn-outline-light px-3 mb-2">{{ $data->j_perkara }}</span></td>
+								<td class="text-center">
+									@if($data->tgl_put_banding=="")
+									<i class="lni lni-ban text-danger"></i>
+									<span class="btn btn-sm btn-outline-danger px-3 mb-2"></span>
+									@elseif($data->tgl_put_banding=="0000-00-00")
+									<i class="lni lni-ban text-danger"></i>
+									<span class="btn btn-sm btn-outline-danger px-3 mb-2"></span>
+									@else
+									<a href="/dirput-pta/dirput/{{$data->tgl_put_banding}}" class="btn btn-sm btn-outline-light px-3 mb-2" target="_blank">
+										<i class="lni lni-cloud-download"></i>
+										<span>{{ $data->tgl_put_banding }}</span>
+									</a>
+									@endif
+								</td>
 								<td class="text-center">
 									@if($data->putusan=="")
 									<i class="lni lni-ban text-danger"></i>

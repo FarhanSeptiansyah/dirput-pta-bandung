@@ -23,6 +23,8 @@ Route::get('/', [HomeController::class, 'index']);
 // Dirput Show User
 Route::get('/home', [UserController::class, 'index']);
 
+Route::get('/filter', [UserController::class, 'filter']);
+
 // Dirput Show Admin
 Route::get('/dirput-pta', [UserController::class, 'index']);
 Route::get('/dirput-pta/admin', [DirputController::class, 'admin']);

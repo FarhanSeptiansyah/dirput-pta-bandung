@@ -27,7 +27,7 @@
 
 </head>
 
-<body class="bg-theme bg-theme2">
+<body class="bg-theme bg-theme3">
 	<!-- wrapper -->
 	<div class="wrapper">
 		<div class="section-authentication-signin d-flex align-items-center justify-content-center my-5 my-lg-0">
@@ -45,7 +45,7 @@
 											@csrf
 											<div class="mb-3 mt-3">
 												<label class="mb-2 text-warning">NAMA</label>
-												<input id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus>
+												<input id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" required autofocus>
 												@error('name')
 												<span class="invalid-feedback" role="alert">
 													<strong>{{ $message }}</strong>
@@ -54,19 +54,16 @@
 											</div>
 											<div class="mb-3 mt-3">
 												<label class="mb-2 text-warning">USERNAME</label>
-												<input id="username" type="text" class="form-control @error('username') is-invalid @enderror" name="username" value="{{ old('username') }}" required autocomplete="username" autofocus>
-
+												<input id="username" type="text" class="form-control @error('username') is-invalid @enderror" name="username" value="{{ old('username') }}" required autofocus>
 												@error('username')
 												<span class="invalid-feedback" role="alert">
 													<strong>{{ $message }}</strong>
 												</span>
 												@enderror
 											</div>
-
 											<div class="mb-3 mt-3">
 												<label class="mb-2 text-warning">EMAIL</label>
-												<input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email">
-
+												<input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}">
 												@error('email')
 												<span class="invalid-feedback" role="alert">
 													<strong>{{ $message }}</strong>
@@ -75,7 +72,7 @@
 											</div>
 											<div class="mb-3 mt-3">
 												<label class="mb-2 text-warning">PASSWORD</label>
-												<input tid="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="current-password">
+												<input tid="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required>
 												@error('password')
 												<span class="invalid-feedback" role="alert">
 													<strong>{{ $message }}</strong>
@@ -84,7 +81,7 @@
 											</div>
 											<div class="mb-3 mt-3">
 												<label class="mb-2 text-warning">CONFIRM PASSWORD</label>
-												<input id="password-confirm" type="password" class="form-control" name="password_confirmation" required autocomplete="new-password">
+												<input id="password-confirm" type="password" class="form-control" name="password_confirmation" required>
 											</div>
 											<div class="d-grid">
 												<button type="submit" class="btn btn-light">Register</button>
