@@ -37,4 +37,14 @@ class LoginController extends Controller
     {
         $this->middleware('guest')->except('logout');
     }
+
+    public function showLoginForm()
+    {
+        return view('/login/v_login-trans');
+    }
+
+    public function username()
+    {
+        return 'username';
+    }
 }

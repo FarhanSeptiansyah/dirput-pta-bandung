@@ -18,31 +18,38 @@ use App\Http\Controllers\UserController;
 */
 
 // Show Home
-Route::get('/', [HomeController::class, 'index']);
+Route::get('/', [HomeController::class, 'index'])->name('index');
 
 // Dirput Show User
-Route::get('/home', [UserController::class, 'index']);
 
-Route::get('/filter', [UserController::class, 'filter']);
+Route::get('/dirput-pta-bandung', [UserController::class, 'index'])->name('index');
+Route::get('/home', [DirputController::class, 'index'])->name('index');
 
-// Dirput Show Admin
-Route::get('/dirput-pta', [UserController::class, 'index']);
-Route::get('/dirput-pta/admin', [DirputController::class, 'admin']);
-Route::get('/dirput-pta/detail/{id_dirput}', [DirputController::class, 'detail']);
-Route::get('/dirput-pta/admin/add', [DirputController::class, 'add']);
-Route::post('/dirput-pta/admin/insert', [DirputController::class, 'insert']);
-Route::get('/dirput-pta/admin/edit/{id_dirput}', [DirputController::class, 'edit']);
-Route::post('/dirput-pta/admin/update/{id_dirput}', [DirputController::class, 'update']);
-Route::get('/dirput-pta/admin/delete/{id_dirput}', [DirputController::class, 'delete']);
 
-// Show Member 
-Route::get('/dirput-pta/admin/member', [MemberController::class, 'index']);
-Route::get('/dirput-pta/admin/detail/{id_dirput}', [MemberController::class, 'detail']);
-Route::get('/dirput-pta/admin/member/add', [MemberController::class, 'add']);
-Route::post('/dirput-pta/admin/member/insert', [MemberController::class, 'insert']);
-Route::get('/dirput-pta/admin/member/edit/{id_dirput}', [MemberController::class, 'edit']);
-Route::post('/dirput-pta/admin/member/update/{id_dirput}', [MemberController::class, 'update']);
-Route::get('/dirput-pta/admin/member/delete/{id_dirput}', [MemberController::class, 'delete']);
-Route::get('/dirput-pta/admin/member/ppid', [MemberController::class, 'ppid']);
+//Hak akses admin
+Route::middleware(['admin'])->group(function () {
+
+    Route::get('/dirput-pta/admin/member', [MemberController::class, 'index'])->name('index');
+    Route::get('/dirput-pta/admin/detail/{id_dirput}', [MemberController::class, 'detail'])->name('detail');
+    Route::get('/dirput-pta/admin/member/add', [MemberController::class, 'add'])->name('add');
+    Route::post('/dirput-pta/admin/member/insert', [MemberController::class, 'insert'])->name('insert');
+    Route::get('/dirput-pta/admin/member/edit/{id_dirput}', [MemberController::class, 'edit'])->name('edit');
+    Route::post('/dirput-pta/admin/member/update/{id_dirput}', [MemberController::class, 'update'])->name('update');
+    Route::get('/dirput-pta/admin/member/delete/{id_dirput}', [MemberController::class, 'delete'])->name('delete');
+    Route::get('/dirput-pta/admin/member/ppid', [MemberController::class, 'ppid'])->name('ppid');
+});
+
+//Hak akses staf
+Route::middleware(['staf'])->group(function () {
+
+    Route::get('/dirput-pta/admin', [DirputController::class, 'admin'])->name('admin');
+    Route::get('/dirput-pta/detail/{id_dirput}', [DirputController::class, 'detail'])->name('detail');
+    Route::get('/dirput-pta/admin/add', [DirputController::class, 'add'])->name('add');
+    Route::post('/dirput-pta/admin/insert', [DirputController::class, 'insert'])->name('insert');
+    Route::get('/dirput-pta/admin/edit/{id_dirput}', [DirputController::class, 'edit'])->name('edit');
+    Route::post('/dirput-pta/admin/update/{id_dirput}', [DirputController::class, 'update'])->name('update');
+    Route::get('/dirput-pta/admin/delete/{id_dirput}', [DirputController::class, 'delete'])->name('delete');
+});
+
 
 Auth::routes();

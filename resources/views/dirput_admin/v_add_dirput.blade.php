@@ -26,8 +26,41 @@
                             </div>
                         </div>
                         <div class="mb-3">
-                            <label class="mb-2 text-warning">JENIS PERKARA</label>
-                            <input type="text" class="form-control @error('j_perkara') is-invalid @enderror" value="{{old('j_perkara')}}" name="j_perkara">
+                            <label for="j_perkara">Jenis Perkara</label>
+                            <select name="j_perkara" class="form-control @error('j_perkara') is-invalid @enderror">
+                                <option>{{old('j_perkara')}}</option>
+                                <option> Asal Usul Anak </option>
+                                <option> Cerai Gugat </option>
+                                <option> Cerai Talak </option>
+                                <option> Dispensasi Kawin </option>
+                                <option> Ekonomi Syariah </option>
+                                <option> Ganti Rugi terhadap Wali </option>
+                                <option> Hak-hak Bekas Isteri </option>
+                                <option> Harta Bersama </option>
+                                <option> Hibah </option>
+                                <option> Isbath Nikah </option>
+                                <option> Izin Kawin </option>
+                                <option> Izin Poligami </option>
+                                <option> Kelalaian Kewajiban Suami/Isteri </option>
+                                <option> Kewarisan </option>
+                                <option> Lain-lain </option>
+                                <option> Nafkah Anak oleh Ibu </option>
+                                <option> P3HP/Penetapan Ahli Waris </option>
+                                <option> Pembatalan Perkawinan </option>
+                                <option> Pencabutan Kekuasaan Orang Tua </option>
+                                <option> Pencabutan Kekuasaan Wali </option>
+                                <option> Pencegahan Perkawinan </option>
+                                <option> Pengesahan Anak/Pengangkatan Anak </option>
+                                <option> Penguasaan Anak/Hadlonah </option>
+                                <option> Penolakan Kawin Campuran </option>
+                                <option> Penolakan Perkawinan oleh PPN </option>
+                                <option> Penunjukan Orang Lain Sbg Wali </option>
+                                <option> Perwalian </option>
+                                <option> Wakaf </option>
+                                <option> Wali Adhol </option>
+                                <option> Wasiat </option>
+                                <option> Zakat/Infaq/Shodaqoh </option>
+                            </select>
                             <div id="validationServerUsernameFeedback" class="invalid-feedback text-danger">
                                 @error('j_perkara')
                                 {{ $message }}

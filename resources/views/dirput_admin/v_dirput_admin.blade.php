@@ -34,7 +34,12 @@
 		<div class="card-body">
 			<div class="table-responsive">
 				<td class="text-center" style="font-size: 5px;">
+					@if(Auth::user()->role==='admin')
 					<a href="/dirput-pta/admin/add" class="btn btn-sm btn-outline-light px-3 mb-2"><i class="lni lni-circle-plus"></i>Tambah Data</a>
+					@elseif(Auth::user()->role==='staf')
+					<a href="/dirput-pta/admin/add" class="btn btn-sm btn-outline-light px-3 mb-2"><i class="lni lni-circle-plus"></i>Tambah Data</a>
+					@elseif(Auth::user()->role==='member')
+					@endif</p>
 				</td>
 				<table id="example" class="table table-striped table-bordered" style="width:100%">
 					<thead>
@@ -67,27 +72,19 @@
 							<td class="text-center">
 								@if($data->j_perkara=="")
 								<i class="lni lni-ban text-danger"></i>
-
 								@elseif($data->j_perkara=="0000-00-00")
 								<i class="lni lni-ban text-danger"></i>
-
 								@else
-								<a href="/dirput-pta/dirput/{{$data->j_perkara}}" class="btn btn-sm btn-outline-light px-3 mb-2" target="_blank">
-									<span>{{ $data->j_perkara }}</span>
-								</a>
+								<span class="btn btn-sm btn-outline-light px-3 mb-2">{{ $data->j_perkara }}</span>
 								@endif
 							</td>
 							<td class="text-center">
 								@if($data->tgl_put_banding=="")
 								<i class="lni lni-ban text-danger"></i>
-
 								@elseif($data->tgl_put_banding=="0000-00-00")
 								<i class="lni lni-ban text-danger"></i>
-
 								@else
-								<a href="/dirput-pta/dirput/{{$data->tgl_put_banding}}" class="btn btn-sm btn-outline-light px-3 mb-2" target="_blank">
-									<span>{{ date('d-m-Y', strtotime($data->tgl_put_banding)) }}</span>
-								</a>
+								<span class="btn btn-sm btn-outline-light px-3 mb-2">{{ date('d-m-Y', strtotime($data->tgl_put_banding)) }}</span>
 								@endif
 							</td>
 							<td class="text-center">
@@ -114,17 +111,17 @@
 								@endif
 							</td>
 							<td class="text-center">
-								@if(Auth::user()->level===1)
-								<a href="/dirput-pta/admin/edit/{{$data->id_dirput}}" class="btn btn-sm btn-outline-primary px-3">edit</a>
+								@if(Auth::user()->role==='admin')
+								<a href="/dirput-pta/admin/edit/{{$data->id_dirput}}" class="btn btn-sm btn-outline-warning px-3">edit</a>
 								<!-- Button trigger modal -->
 								<button type="button" class="btn btn-sm btn-outline-danger px-3" data-bs-toggle="modal" data-bs-target="#deleteModal{{ $data->id_dirput }}">
 									hapus</button>
-								@elseif(Auth::user()->level===2)
-								<a href="/dirput-pta/admin/edit/{{$data->id_dirput}}" class="btn btn-sm btn-outline-primary px-3">edit</a>
+								@elseif(Auth::user()->role==='staf')
+								<a href="/dirput-pta/admin/edit/{{$data->id_dirput}}" class="btn btn-sm btn-outline-warning px-3">edit</a>
 								<!-- Button trigger modal -->
 								<button type="button" class="btn btn-sm btn-outline-danger px-3" data-bs-toggle="modal" data-bs-target="#deleteModal{{ $data->id_dirput }}">
 									hapus</button>
-								@elseif(Auth::user()->level===3)
+								@elseif(Auth::user()->role==='member')
 								<button class="btn btn-sm btn-outline-warning px-3">Login Admin</button>
 								@endif
 							</td>

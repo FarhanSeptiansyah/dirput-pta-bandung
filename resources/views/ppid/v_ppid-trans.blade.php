@@ -32,7 +32,7 @@
                                 <a href="javascript:;" class="list-inline-item bg-light text-white border-0"><i class="bx bxl-linkedin"></i></a>
                             </div>
                             <div class="d-grid"> <a href="#" class="btn btn-light radius-15">Contact Me</a>
-                                <div class="d-grid"> <a href="/dirput-pta/admin/member" class="btn btn-light radius-15 mt-3">Back</a>
+                                <div class="d-grid"> <a href="/dirput-pta-bandung" class="btn btn-light radius-15 mt-3">Back to Home</a>
                                 </div>
                             </div>
                         </div>
@@ -48,11 +48,6 @@
             <!--End Back To Top Button-->
         </div>
         <!--end wrapper-->
-
-
-        <!--start switcher-->
-        @include('layouts.v_switcher-trans')
-        <!--end switcher-->
 
         <!-- Bootstrap JS -->
         <script src="{{ asset('template')}}/assets/js/bootstrap.bundle.min.js"></script>

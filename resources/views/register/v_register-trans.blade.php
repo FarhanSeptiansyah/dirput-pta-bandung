@@ -52,7 +52,7 @@
 												</span>
 												@enderror
 											</div>
-											<!-- <div class="mb-3 mt-3">
+											<div class="mb-3 mt-3">
 												<label class="mb-2 text-warning">USERNAME</label>
 												<input id="username" type="text" class="form-control @error('username') is-invalid @enderror" name="username" value="{{ old('username') }}" required autofocus>
 												@error('username')
@@ -60,19 +60,19 @@
 													<strong>{{ $message }}</strong>
 												</span>
 												@enderror
-											</div> -->
+											</div>
 											<div class="mb-3 mt-3">
 												<label class="mb-2 text-warning">EMAIL</label>
-												<input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}">
+												<input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" required autofocus>
 												@error('email')
-												<span class="invalid-feedback" role="alert">
+												<span class=" invalid-feedback" role="alert">
 													<strong>{{ $message }}</strong>
 												</span>
 												@enderror
 											</div>
 											<div class="mb-3 mt-3">
 												<label class="mb-2 text-warning">PASSWORD</label>
-												<input tid="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required>
+												<input tid="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autofocus>
 												@error('password')
 												<span class="invalid-feedback" role="alert">
 													<strong>{{ $message }}</strong>
@@ -81,7 +81,7 @@
 											</div>
 											<div class="mb-3 mt-3">
 												<label class="mb-2 text-warning">CONFIRM PASSWORD</label>
-												<input id="password-confirm" type="password" class="form-control" name="password_confirmation" required>
+												<input id="password-confirm" type="password" class="form-control" name="password_confirmation" required autofocus>
 											</div>
 											<div class="d-grid">
 												<button type="submit" class="btn btn-light">Register</button>

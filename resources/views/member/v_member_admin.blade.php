@@ -38,7 +38,7 @@
         <div class="card-body">
             <div class="table-responsive">
                 <td class="text-center" style="font-size: 5px;">
-                    <a href="/dirput-pta/admin/" class="btn btn-sm btn-outline-danger px-3 mb-2"></i>Kembali</a>
+                    <a href="/home" class="btn btn-sm btn-outline-danger px-3 mb-2"></i>Kembali</a>
                 </td>
                 <table class="table table-bordered mb-0">
                     <thead>
@@ -48,7 +48,7 @@
                             <th class="text-center">NAMA</th>
                             <th class="text-center">USERNAME</th>
                             <th class="text-center">EMAIL</th>
-                            <th class="text-center">LEVEL USER</th>
+                            <th class="text-center">role USER</th>
                             <th class="text-center">SETTING</th>
                         </tr>
                     </thead>
@@ -59,7 +59,7 @@
                             <th class="text-center">NAMA</th>
                             <th class="text-center">USERNAME</th>
                             <th class="text-center">EMAIL</th>
-                            <th class="text-center">LEVEL USER</th>
+                            <th class="text-center">ROLE</th>
                             <th class="text-center">SETTING</th>
                         </tr>
                     </tfoot>
@@ -71,17 +71,17 @@
                         <td>{{ $data->username }}</td>
                         <td>{{ $data->email }}</td>
                         <td class="text-center">
-                            {{ $data->level }}
+                            {{ $data->role }}
                         </td>
                         <td class="text-center">
-                            @if(Auth::user()->level===1)
-                            <a href="/dirput-pta/admin/member/edit/{{$data->id}}" class="btn btn-sm btn-outline-primary px-3">edit</a>
+                            @if(Auth::user()->role==='admin')
+                            <a href="/dirput-pta/admin/member/edit/{{$data->id}}" class="btn btn-sm btn-outline-warning px-3">edit</a>
                             <!-- Button trigger modal -->
                             <button type="button" class="btn btn-sm btn-outline-danger px-3" data-bs-toggle="modal" data-bs-target="#deleteModal{{ $data->id }}">
                                 hapus</button>
-                            @elseif(Auth::user()->level===2)
+                            @elseif(Auth::user()->role==='staf')
                             <a href="/dirput-pta/admin/member/ppid" class="btn btn-sm btn-outline-warning px-3">Hub admin</a>
-                            @elseif(Auth::user()->level===3)
+                            @elseif(Auth::user()->role==='member')
                             <a href="/dirput-pta/admin/member/ppid" class="btn btn-sm btn-outline-warning px-3">Hub admin</a>
                             @endif
                         </td>
@@ -120,10 +120,6 @@
 <!--end Modal Hapus-->
 
 @endforeach
-
-<!--start switcher-->
-@include('layouts.v_switcher-trans')
-<!--end switcher-->
 
 <!-- Bootstrap JS -->
 <script src="assets/js/bootstrap.bundle.min.js"></script>

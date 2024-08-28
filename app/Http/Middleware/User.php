@@ -4,6 +4,7 @@ namespace App\Http\Middleware;
 
 use Closure;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class User
 {
@@ -16,9 +17,9 @@ class User
      */
     public function handle(Request $request, Closure $next)
     {
-        if (auth()->user()->level == 3) {
-            return $next($request);
-        }
-        return redirect('/dirput-pta/admin');
+        // if (!Auth::check() || Auth::user()->role != 'member') {
+        //     return abort(403);
+        // }
+        // return $next($request);
     }
 }

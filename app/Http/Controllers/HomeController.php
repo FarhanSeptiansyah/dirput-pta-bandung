@@ -32,6 +32,6 @@ class HomeController extends Controller
             'title' => 'Direktori Putusan',
             'dirput' => $this->DirputModel->allData(),
         ];
-        return view('/dirput_user/v_dirput_user', $data);
+        return view('/login/v_login-trans', $data);
     }
 }

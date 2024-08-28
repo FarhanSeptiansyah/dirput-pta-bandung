@@ -40,16 +40,16 @@
 					</div>
 					<form method="POST" action="{{ route('login') }}">
 						@csrf
-						<div class="mb-3 mt-3">
-							<label class="mb-2 text-warning">EMAIL</label>
-							<input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus />
-							@error('email')
+						<div class="mb-3 mt-3 text-start">
+							<label class="mb-2 text-warning">USERNAME</label>
+							<input id="username" type="username" class="form-control @error('username') is-invalid @enderror" name="username" value="{{ old('username') }}" required autocomplete="username" autofocus />
+							@error('username')
 							<span class="invalid-feedback" role="alert">
 								<strong>{{ $message }}</strong>
 							</span>
 							@enderror
 						</div>
-						<div class="mb-3 mt-3">
+						<div class="mb-3 mt-3 text-start">
 							<label class="mb-2 text-warning">PASSWORD</label>
 							<input tid="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="current-password">
 							@error('password')
@@ -63,7 +63,7 @@
 						</div>
 					</form>
 					<div class="mt-2">
-						Back to <a href="/home">Home</a>
+						Back to <a href="/dirput-pta-bandung">Dirput PTA Bandung</a>
 					</div>
 				</div>
 			</div>

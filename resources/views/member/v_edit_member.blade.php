@@ -50,9 +50,9 @@
                             <label class="mb-2 text-warning">LEVEL USER</label>
                             <select name="level" class="form-control @error('level') is-invalid @enderror">
                                 <option>{{$member->level}}</option>
-                                <option>1</option>
-                                <option>2</option>
-                                <option>3</option>
+                                <option>admin</option>
+                                <option>staf</option>
+                                <option>member</option>
                             </select>
                         </div>
                         <div class="mb-3">

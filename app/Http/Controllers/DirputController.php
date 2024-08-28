@@ -13,6 +13,15 @@ class DirputController extends Controller
         $this->middleware('auth');
     }
 
+    public function index()
+    {
+        $data = [
+            'title' => 'Direktori Putusan',
+            'dirput' => $this->DirputModel->allData(),
+        ];
+        return view('/dirput_admin/v_dirput_admin', $data);
+    }
+
     // Admin 
     public function admin()
     {
