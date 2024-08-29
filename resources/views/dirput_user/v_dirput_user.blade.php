@@ -46,32 +46,32 @@
 				<table id="example" class="table table-borderedless" style="width:100%">
 					<thead>
 						<tr>
-							<th class="text-center" style="width: 10px;">NO</th>
-							<th class="text-center">NOMOR PERKARA BANDING</th>
-							<th class="text-center">JENIS PERKARA</th>
-							<th class="text-center">TANGGAL PUTUS</th>
-							<th class="text-center">PUTUSAN</th>
-							<th class="text-center">UPLOAD</th>
-							<!-- <th class="text-center" style="width: 150px;">ACTION</th> -->
+							<th class="text-start" style="width: 5px;">NO</th>
+							<th class="text-start">NOMOR PERKARA BANDING</th>
+							<th class="text-start">JENIS PERKARA</th>
+							<th class="text-start">TANGGAL PUTUS</th>
+							<th class="text-start">PUTUSAN</th>
+							<th class="text-start">UPLOAD</th>
+							<!-- <th class="text-start" style="width: 150px;">ACTION</th> -->
 						</tr>
 					</thead>
 					<tfoot>
 						<tr>
-							<th class="text-center">NO</th>
-							<th class="text-center">NOMOR PERKARA BANDING</th>
-							<th class="text-center">JENIS PERKARA</th>
-							<th class="text-center">TANGGAL PUTUS</th>
-							<th class="text-center">PUTUSAN</th>
-							<th class="text-center">UPLOAD</th>
-							<!-- <th class="text-center">ACTION</th> -->
+							<th class="text-start">NO</th>
+							<th class="text-start">NOMOR PERKARA BANDING</th>
+							<th class="text-start">JENIS PERKARA</th>
+							<th class="text-start">TANGGAL PUTUS</th>
+							<th class="text-start">PUTUSAN</th>
+							<th class="text-start">UPLOAD</th>
+							<!-- <th class="text-start">ACTION</th> -->
 						</tr>
 					</tfoot>
 					<tbody>
 						@foreach ($dirput as $data)
 						<tr>
-							<td class="text-center">{{$loop->iteration}}</td>
-							<td class="text-center"><span class="btn btn-sm btn-outline-light px-3 mb-2">{{ $data->no_banding }}</span></td>
-							<td class="text-center">
+							<td class="text-start">{{$loop->iteration}}</td>
+							<td class="text-start"><span class="btn btn-sm btn-outline-light px-3 mb-2">{{ $data->no_banding }}</span></td>
+							<td class="text-start">
 								@if($data->j_perkara=="")
 								<i class="lni lni-ban text-danger"></i>
 								@elseif($data->j_perkara=="0000-00-00")
@@ -80,7 +80,7 @@
 								<span class="btn btn-sm btn-outline-light px-3 mb-2">{{ $data->j_perkara }}</span>
 								@endif
 							</td>
-							<td class="text-center">
+							<td class="text-start">
 								@if($data->tgl_put_banding=="")
 								<i class="lni lni-ban text-danger"></i>
 								@elseif($data->tgl_put_banding=="0000-00-00")
@@ -89,10 +89,9 @@
 								<span class="btn btn-sm btn-outline-light px-3 mb-2">{{ date('d-m-Y', strtotime($data->tgl_put_banding)) }}</span>
 								@endif
 							</td>
-							<td class="text-center">
+							<td class="text-start">
 								@if($data->putusan=="")
 								<i class="lni lni-ban text-danger"></i>
-								<span class="btn btn-sm btn-outline-danger px-3 mb-2">not avalaible</span>
 								@elseif($data->putusan=="0000-00-00")
 								<i class="lni lni-ban text-danger"></i>
 								<span class="btn btn-sm btn-outline-danger px-3 mb-2">putusan not avalaible</span>
@@ -103,13 +102,13 @@
 								</a>
 								@endif
 							</td>
-							<td class="text-center">
+							<td class="text-start">
 								@if($data->updated_at=="")
 								<span class="btn btn-sm btn-outline-light px-3 mb-2">{{ date('d-m-Y H:i:s', strtotime($data->created_at)) }}</span>
 								@elseif($data->updated_at=="0000-00-00 00:00:00")
 								<span class="btn btn-sm btn-outline-light px-3 mb-2">{{ date('d-m-Y H:i:s', strtotime($data->created_at)) }}</span>
 								@else
-								<span class="btn btn-sm btn-outline-light px-3 mb-2">{{ date('d-m-Y H:i:s', strtotime($data->updated_at)) }}</span>
+								<span class="btn btn-sm btn-outline-light px-3 mb-2">{{ date('d-m-Y H:i:s', strtotime($data->created_at)) }}</span>
 								@endif
 							</td>
 							<!-- <td class="text-center">
