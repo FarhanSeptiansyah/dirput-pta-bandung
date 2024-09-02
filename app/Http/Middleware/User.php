@@ -17,9 +17,9 @@ class User
      */
     public function handle(Request $request, Closure $next)
     {
-        // if (!Auth::check() || Auth::user()->role != 'member') {
-        //     return abort(403);
-        // }
-        // return $next($request);
+        if (!Auth::check() || Auth::user()->role != 'member') {
+            return abort(403);
+        }
+        return $next($request);
     }
 }
