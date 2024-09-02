@@ -1,3 +1,3 @@
-<footer class="container text-center">
-    <p class="mb-0">Copyright © 2022 Pengadilan Tinggi Agama Bandung</p>
+<footer class="container text-center mt-5">
+    <p class="mb-0">Copyright © 2019 Pengadilan Tinggi Agama Bandung</p>
 </footer>

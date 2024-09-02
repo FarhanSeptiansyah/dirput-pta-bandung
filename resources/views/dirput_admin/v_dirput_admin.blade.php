@@ -90,10 +90,8 @@
 							<td class="text-start">
 								@if($data->putusan=="")
 								<i class="lni lni-ban text-danger"></i>
-								<span class="btn btn-sm btn-outline-danger px-3 mb-2">not avalaible</span>
 								@elseif($data->putusan=="0000-00-00")
 								<i class="lni lni-ban text-danger"></i>
-								<span class="btn btn-sm btn-outline-danger px-3 mb-2">putusan not avalaible</span>
 								@else
 								<a href="/dirput-pta/dirput/{{$data->putusan}}" class="btn btn-sm btn-outline-light px-3 mb-2" target="_blank">
 									<i class="lni lni-cloud-download"></i>

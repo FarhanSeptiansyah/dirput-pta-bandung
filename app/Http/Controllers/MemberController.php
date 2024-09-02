@@ -45,13 +45,13 @@ class MemberController extends Controller
         Request()->validate([
             'name' => 'required',
             'username' => 'required',
-            'level' => 'required',
+            'role' => 'required',
             'foto_user' => 'mimes:jpg,png|max:1024',
 
         ], [
             'name' => 'Name wajib diisi!!',
             'username.required' => 'Username wajib diisi!!',
-            'level' => 'Level wajib diisi!!',
+            'role' => 'role wajib diisi!!',
         ]);
 
         //jika validasi tidak ada maka lakukan simpan data
@@ -65,14 +65,14 @@ class MemberController extends Controller
             $data = [
                 'name' => Request()->name,
                 'username' => Request()->username,
-                'level' => Request()->level,
+                'role' => Request()->role,
                 'foto_user' => $fileName,
             ];
         } else {
             $data = [
                 'name' => Request()->name,
                 'username' => Request()->username,
-                'level' => Request()->level,
+                'role' => Request()->role,
             ];
         }
         $this->MemberModel->editData($id, $data);
@@ -96,13 +96,13 @@ class MemberController extends Controller
         Request()->validate([
             'name' => 'required',
             'username' => 'required',
-            'level' => 'required',
+            'role' => 'required',
             'foto_user' => 'mimes:jpg,png|max:1024',
 
         ], [
             'name' => 'Name wajib diisi!!',
             'username.required' => 'Username wajib diisi!!',
-            'level' => 'Level wajib diisi!!',
+            'role' => 'role wajib diisi!!',
         ]);
 
         //jika validasi tidak ada maka lakukan simpan data
@@ -116,14 +116,14 @@ class MemberController extends Controller
             $data = [
                 'name' => Request()->name,
                 'username' => Request()->username,
-                'level' => Request()->level,
+                'role' => Request()->role,
                 'foto_user' => $fileName,
             ];
         } else {
             $data = [
                 'name' => Request()->name,
                 'username' => Request()->username,
-                'level' => Request()->level,
+                'role' => Request()->role,
             ];
         }
         $this->MemberModel->editData($id, $data);

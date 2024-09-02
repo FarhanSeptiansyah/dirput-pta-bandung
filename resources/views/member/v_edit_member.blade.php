@@ -47,9 +47,9 @@
                             </div>
                         </div>
                         <div class="mb-3">
-                            <label class="mb-2 text-warning">LEVEL USER</label>
-                            <select name="level" class="form-control @error('level') is-invalid @enderror">
-                                <option>{{$member->level}}</option>
+                            <label class="mb-2 text-warning">ROLE USER</label>
+                            <select name="role" class="form-control @error('role') is-invalid @enderror">
+                                <option>{{$member->role}}</option>
                                 <option>admin</option>
                                 <option>staf</option>
                                 <option>member</option>
