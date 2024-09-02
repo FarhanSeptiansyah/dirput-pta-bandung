@@ -17,16 +17,15 @@ use App\Http\Controllers\UserController;
 |
 */
 
-// Show Home
-Route::get('/', [HomeController::class, 'index'])->name('index');
-
 // Dirput Show User
+Route::middleware(['guest'])->group(function () {
+    Route::get('/', [HomeController::class, 'index'])->name('index');
+});
 
-Route::get('/dirput-pta-bandung', [UserController::class, 'index'])->name('index');
+// Show Home
 Route::get('/home', [DirputController::class, 'index'])->name('index');
 
-
-//Hak akses admin
+//Akses admin
 Route::middleware(['admin'])->group(function () {
 
     Route::get('/dirput-pta/admin/member', [MemberController::class, 'index'])->name('index');
@@ -39,7 +38,7 @@ Route::middleware(['admin'])->group(function () {
     Route::get('/dirput-pta/admin/member/ppid', [MemberController::class, 'ppid'])->name('ppid');
 });
 
-//Hak akses staf
+//Akses staf
 Route::middleware(['staf'])->group(function () {
 
     Route::get('/dirput-pta/admin', [DirputController::class, 'admin'])->name('admin');

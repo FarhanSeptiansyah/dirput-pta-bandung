@@ -10,11 +10,11 @@
 
     <div class="panel-heading">
         <h4 class="panel-title mt-5 text-center">
-            INPUT PUTUSAN ANONIMASI
+            INPUT DATA USER
         </h4>
     </div>
     <div class="panel-body mt-2">
-        <form method="POST" action="{{ route('register') }}">
+        <form method="POST" action="/dirput-pta/admin/member/insert">
             @csrf
             <div class="mb-3 mt-3">
                 <label class="mb-2 text-warning">NAMA</label>
@@ -29,6 +29,21 @@
                 <label class="mb-2 text-warning">USERNAME</label>
                 <input id="username" type="text" class="form-control @error('username') is-invalid @enderror" name="username" value="{{ old('username') }}" required autocomplete="username" autofocus>
 
+                @error('username')
+                <span class="invalid-feedback" role="alert">
+                    <strong>{{ $message }}</strong>
+                </span>
+                @enderror
+            </div>
+
+            <div class="mb-3 mt-3">
+                <label class="mb-2 text-warning">ROLE</label>
+                <select name="role" class="form-control form-control-sm @error('penyerah') is-invalid @enderror">
+                                <option>--Pilih Role--</option>
+                                <option>admin</option>
+                                <option>staf</option>
+                                <option>member</option>
+                            </select>
                 @error('username')
                 <span class="invalid-feedback" role="alert">
                     <strong>{{ $message }}</strong>
@@ -54,10 +69,6 @@
                     <strong>{{ $message }}</strong>
                 </span>
                 @enderror
-            </div>
-            <div class="mb-3 mt-3">
-                <label class="mb-2 text-warning">CONFIRM PASSWORD</label>
-                <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required autocomplete="new-password">
             </div>
             <div class="d-grid">
                 <button type="submit" class="btn btn-light">Register</button>

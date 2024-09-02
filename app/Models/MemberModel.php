@@ -5,6 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\DB;
+use App\Http\Controllers\Request;
 
 
 class MemberModel extends Model
@@ -34,5 +35,10 @@ class MemberModel extends Model
     public function deleteData($id)
     {
         DB::table('users')->where('id', $id)->delete();
+    }
+
+    public function resetPassword($id, $data)
+    {
+        DB::table('users')->where('id', $id)->update($data);
     }
 }

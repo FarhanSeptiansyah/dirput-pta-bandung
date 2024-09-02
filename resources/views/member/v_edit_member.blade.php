@@ -38,16 +38,7 @@
                             </div>
                         </div>
                         <div class="mb-3">
-                            <label class="mb-2 text-warning">EMAIL</label>
-                            <input type="text" class="form-control @error('email') is-invalid @enderror" value="{{$member->email}}" name="email">
-                            <div id="validationServeremailFeedback" class="invalid-feedback text-danger">
-                                @error('email')
-                                {{ $message }}
-                                @enderror
-                            </div>
-                        </div>
-                        <div class="mb-3">
-                            <label class="mb-2 text-warning">ROLE USER</label>
+                            <label class="mb-2 text-warning">ROLE</label>
                             <select name="role" class="form-control @error('role') is-invalid @enderror">
                                 <option>{{$member->role}}</option>
                                 <option>admin</option>
@@ -60,18 +51,27 @@
                             <div>
                                 <img src="{{asset('img/'.$member->foto_user)}}" width="40" height="60" />
                             </div>
-                            <label class="mb-2 text-warning">UBAH FOTO</label>
+                            <label class="mb-2 text-warning mt-2">UBAH FOTO</label>
                             <input type="file" class="form-control form-control-sm @error('foto_user') is-invalid @enderror" value="{{$member->foto_user}}" name="foto_user">
                             <div id="validationServerfoto_userFeedback" class="invalid-feedback">
                                 @error('foto_user')
                                 {{ $message }}
                                 @enderror
                             </div>
-                            <div class="mb-3 mt-3">
+                        </div>
+                        <div class="mb-3">
+                            <label class="mb-2 text-warning">UBAH PASSWORD</label>
+                            <input type="text" class="form-control @error('password') is-invalid @enderror" value="" name="password">
+                            <div id="validationServeremailFeedback" class="invalid-feedback text-danger">
+                                @error('password')
+                                {{ $message }}
+                                @enderror
+                            </div>
+                        </div>
+                        <div class="mb-3 mt-3">
                                 <button class="btn btn-sm btn-outline-success px-3 mb-2">Simpan</button>
                                 <a href="/dirput-pta/admin/member" class="btn btn-sm btn-outline-danger px-3 mb-2"></i>Kembali</a>
                             </div>
-                        </div>
                     </div>
                 </div>
         </form>

@@ -52,7 +52,7 @@
 												</span>
 												@enderror
 											</div>
-											<div class="mb-3 mt-3">
+											<!-- <div class="mb-3 mt-3">
 												<label class="mb-2 text-warning">USERNAME</label>
 												<input id="username" type="text" class="form-control @error('username') is-invalid @enderror" name="username" value="{{ old('username') }}" required autofocus>
 												@error('username')
@@ -60,7 +60,7 @@
 													<strong>{{ $message }}</strong>
 												</span>
 												@enderror
-											</div>
+											</div> -->
 											<div class="mb-3 mt-3">
 												<label class="mb-2 text-warning">EMAIL</label>
 												<input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" required autofocus>

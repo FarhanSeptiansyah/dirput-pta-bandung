@@ -39,6 +39,7 @@
             <div class="table-responsive">
                 <td class="text-center" style="font-size: 5px;">
                     <a href="/home" class="btn btn-sm btn-outline-danger px-3 mb-2"></i>Kembali</a>
+                    <a href="/dirput-pta/admin/member/add" class="btn btn-sm btn-outline-light px-3 mb-2"></i>Tambah User</a>
                 </td>
                 <table class="table table-bordered">
                     <thead>
@@ -47,8 +48,7 @@
                             <th class="text-center">FOTO</th>
                             <th class="text-center">NAMA</th>
                             <th class="text-center">USERNAME</th>
-                            <th class="text-center">EMAIL</th>
-                            <th class="text-center">role USER</th>
+                            <th class="text-center">ROLE</th>
                             <th class="text-center">SETTING</th>
                         </tr>
                     </thead>
@@ -58,18 +58,16 @@
                             <th class="text-center">FOTO</th>
                             <th class="text-center">NAMA</th>
                             <th class="text-center">USERNAME</th>
-                            <th class="text-center">EMAIL</th>
                             <th class="text-center">ROLE</th>
                             <th class="text-center">SETTING</th>
                         </tr>
                     </tfoot>
                     @foreach ($member as $data)
                     <tr>
-                        <td scope="row">{{$loop->iteration}}</td>
+                        <td class="text-center" scope="row">{{$loop->iteration}}</td>
                         <td class="text-center"> <img src="{{ asset('/img/'.$data->foto_user) }}" width="30" height="40" alt="" title=""></td>
                         <td>{{ $data->name }}</td>
                         <td>{{ $data->username }}</td>
-                        <td>{{ $data->email }}</td>
                         <td class="text-center">
                             {{ $data->role }}
                         </td>
@@ -109,7 +107,7 @@
                 <h5 class="modal-title text-warning"></h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
-            <p class="text-center">Apakah anda ingin menghapus perkara nomor {{ $data->name }} ?</p>
+            <p class="text-center">Apakah anda ingin menghapus user {{ $data->name }} ?</p>
             <div class="modal-footer">
                 <button type="button" class="btn btn-sm btn-secondary" data-bs-dismiss="modal">Tidak</button>
                 <a href="/dirput-pta/admin/member/delete/{{$data->id}}" type="button" class="btn btn-sm btn-danger">Ya</a>

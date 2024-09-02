@@ -32,6 +32,12 @@ class DirputController extends Controller
         return view('/dirput_admin/v_dirput_admin', $data);
     }
 
+    public function login()
+    {
+        return view('/login/v_login-trans');
+    }
+
+
     // Add Data
     public function add()
     {

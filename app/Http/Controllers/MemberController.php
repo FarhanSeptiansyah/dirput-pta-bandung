@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\MemberModel;
 use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Facades\Hash;
 
 class MemberController extends Controller
 {
@@ -40,18 +41,20 @@ class MemberController extends Controller
         return view('/member/v_add_member', $data);
     }
 
-    public function insert($id)
+    public function insert()
     {
         Request()->validate([
             'name' => 'required',
             'username' => 'required',
             'role' => 'required',
             'foto_user' => 'mimes:jpg,png|max:1024',
+            'password' => 'required',
 
         ], [
             'name' => 'Name wajib diisi!!',
             'username.required' => 'Username wajib diisi!!',
             'role' => 'role wajib diisi!!',
+            'password' => 'password wajib diisi!!',
         ]);
 
         //jika validasi tidak ada maka lakukan simpan data
@@ -67,18 +70,21 @@ class MemberController extends Controller
                 'username' => Request()->username,
                 'role' => Request()->role,
                 'foto_user' => $fileName,
+                'password' => Hash::make(Request()->password),
             ];
         } else {
             $data = [
                 'name' => Request()->name,
                 'username' => Request()->username,
                 'role' => Request()->role,
+                'password' => Hash::make(Request()->password),
             ];
         }
-        $this->MemberModel->editData($id, $data);
+        $this->MemberModel->addData($data);
 
         return redirect('/dirput-pta/admin/member')->with('pesan', 'Data Berhasil Diupdate !!');
     }
+
     public function edit($id)
     {
         if (!$this->MemberModel->detailData($id)) {
@@ -124,6 +130,8 @@ class MemberController extends Controller
                 'name' => Request()->name,
                 'username' => Request()->username,
                 'role' => Request()->role,
+                'password' => Hash::make(Request()->password),
+                
             ];
         }
         $this->MemberModel->editData($id, $data);
@@ -141,4 +149,5 @@ class MemberController extends Controller
         $this->MemberModel->deleteData($id);
         return redirect('/dirput-pta/admin/member')->with('pesan', 'Data Berhasil Dihapus !!');
     }
+
 }

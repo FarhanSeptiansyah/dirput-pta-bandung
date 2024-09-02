@@ -34,7 +34,7 @@
 			<div class="card shadow-none bg-transparent">
 				<div class="card-body p-md-5 text-center">
 					<div class="">
-						<a href="{{ route('register') }}">
+						<a href="#">
 							<img src="{{ asset('template')}}/assets/images/icons/user.png" class="mt-5" width="120" alt="" />
 						</a>
 					</div>
