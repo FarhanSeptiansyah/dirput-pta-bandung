@@ -10,7 +10,7 @@
 
     <div class="panel-heading">
         <h4 class="panel-title mt-5 text-center">
-            UBAH DATA USER
+            DATA USER
         </h4>
     </div>
     <div class="panel-body">
@@ -51,7 +51,7 @@
                             <div>
                                 <img src="{{asset('img/'.$member->foto_user)}}" width="40" height="60" />
                             </div>
-                            <label class="mb-2 text-warning mt-2">UBAH FOTO</label>
+                            <label class="mb-2 text-warning mt-2">UPLOAD FOTO</label>
                             <input type="file" class="form-control form-control-sm @error('foto_user') is-invalid @enderror" value="{{$member->foto_user}}" name="foto_user">
                             <div id="validationServerfoto_userFeedback" class="invalid-feedback">
                                 @error('foto_user')
@@ -60,8 +60,8 @@
                             </div>
                         </div>
                         <div class="mb-3">
-                            <label class="mb-2 text-warning">UBAH PASSWORD</label>
-                            <input type="text" class="form-control @error('password') is-invalid @enderror" value="" name="password">
+                            <label class="mb-2 text-warning">CHANGE PASSWORD</label>
+                            <input type="password" class="form-control @error('password') is-invalid @enderror" value="" name="password">
                             <div id="validationServeremailFeedback" class="invalid-feedback text-danger">
                                 @error('password')
                                 {{ $message }}
@@ -69,7 +69,7 @@
                             </div>
                         </div>
                         <div class="mb-3 mt-3">
-                                <button class="btn btn-sm btn-outline-success px-3 mb-2">Simpan</button>
+                                <button class="btn btn-sm btn-outline-light px-3 mb-2">Simpan</button>
                                 <a href="/dirput-pta/admin/member" class="btn btn-sm btn-outline-danger px-3 mb-2"></i>Kembali</a>
                             </div>
                     </div>

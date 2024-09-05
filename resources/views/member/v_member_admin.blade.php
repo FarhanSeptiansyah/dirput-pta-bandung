@@ -18,7 +18,7 @@
 
     <div class="container">
         <br><br>
-        <h4 class="panel-title mt-5 text-center">
+        <h4 class="panel-title text-center">
             DATA USER
         </h4>
         <!-- Notificatin -->
@@ -73,7 +73,7 @@
                         </td>
                         <td class="text-center">
                             @if(Auth::user()->role==='admin')
-                            <a href="/dirput-pta/admin/member/edit/{{$data->id}}" class="btn btn-sm btn-outline-warning px-3">edit</a>
+                            <a href="/dirput-pta/admin/member/edit/{{$data->id}}" class="btn btn-sm btn-outline-warning px-3">Detail</a>
                             <!-- Button trigger modal -->
                             <button type="button" class="btn btn-sm btn-outline-danger px-3" data-bs-toggle="modal" data-bs-target="#deleteModal{{ $data->id }}">
                                 hapus</button>
