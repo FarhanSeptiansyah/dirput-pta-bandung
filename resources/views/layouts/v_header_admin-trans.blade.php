@@ -2,7 +2,7 @@
 	<div class="container">
 		<div class="user-box dropdown">
 			<a class="d-flex align-items-center nav-link dropdown-toggle dropdown-toggle-nocaret" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-				<img src="{{ asset('/img/'.Auth::user()->foto_user) }}" class="user-img" alt="user avatar" />
+				<img src="{{ asset('public/img/'.Auth::user()->foto_user) }}" class="user-img" alt="user avatar" />
 				<div class="user-info ps-3">
 					<h6 class="designattion mb-0">Selamat datang {{ Auth::user()->name }}</h6>
 					<p class="designattion mb-0">Anda login sebagai @if(Auth::user()->role==='admin')

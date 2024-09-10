@@ -11,19 +11,19 @@
 
     <title> {{ $title }} | PTA Bandung</title>
 
-    <link href="{{ asset('template')}}/assets/plugins/simplebar/css/simplebar.css" rel="stylesheet" />
-    <link href="{{ asset('template')}}/assets/plugins/perfect-scrollbar/css/perfect-scrollbar.css" rel="stylesheet" />
-    <link href="{{ asset('template')}}/assets/plugins/metismenu/css/metisMenu.min.css" rel="stylesheet" />
-    <link href="{{ asset('template')}}/assets/plugins/datatable/css/dataTables.bootstrap5.min.css" rel="stylesheet" />
+    <link href="{{ asset('public/template')}}/assets/plugins/simplebar/css/simplebar.css" rel="stylesheet" />
+    <link href="{{ asset('public/template')}}/assets/plugins/perfect-scrollbar/css/perfect-scrollbar.css" rel="stylesheet" />
+    <link href="{{ asset('public/template')}}/assets/plugins/metismenu/css/metisMenu.min.css" rel="stylesheet" />
+    <link href="{{ asset('public/template')}}/assets/plugins/datatable/css/dataTables.bootstrap5.min.css" rel="stylesheet" />
     <!-- loader-->
-    <link href="{{ asset('template')}}/assets/css/pace.min.css" rel="stylesheet" />
-    <script src="{{ asset('template')}}/assets/js/pace.min.js"></script>
+    <link href="{{ asset('public/template')}}/assets/css/pace.min.css" rel="stylesheet" />
+    <script src="{{ asset('public/template')}}/assets/js/pace.min.js"></script>
     <!-- Bootstrap CSS -->
-    <link href="{{ asset('template')}}/assets/css/bootstrap.min.css" rel="stylesheet">
-    <link href="{{ asset('template')}}/assets/css/bootstrap-extended.css" rel="stylesheet">
+    <link href="{{ asset('public/template')}}/assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="{{ asset('public/template')}}/assets/css/bootstrap-extended.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
-    <link href="{{ asset('template')}}/assets/css/app.css" rel="stylesheet">
-    <link href="{{ asset('template')}}/assets/css/icons.css" rel="stylesheet">
+    <link href="{{ asset('public/template')}}/assets/css/app.css" rel="stylesheet">
+    <link href="{{ asset('public/template')}}/assets/css/icons.css" rel="stylesheet">
 
 </head>
 
@@ -57,15 +57,15 @@
     <!--end switcher-->
 
     <!-- Bootstrap JS -->
-    <script src="{{ asset('template')}}/assets/js/bootstrap.bundle.min.js"></script>
+    <script src="{{ asset('public/template')}}/assets/js/bootstrap.bundle.min.js"></script>
     <!--plugins-->
-    <script src="{{ asset('template')}}/assets/js/jquery.min.js"></script>
-    <script src="{{ asset('template')}}/assets/plugins/simplebar/js/simplebar.min.js"></script>
-    <script src="{{ asset('template')}}/assets/plugins/metismenu/js/metisMenu.min.js"></script>
-    <script src="{{ asset('template')}}/assets/plugins/perfect-scrollbar/js/perfect-scrollbar.js"></script>
-    <script src="{{ asset('template')}}/assets/plugins/apexcharts-bundle/js/apexcharts.min.js"></script>
-    <script src="{{ asset('template')}}/assets/plugins/datatable/js/jquery.dataTables.min.js"></script>
-    <script src="{{ asset('template')}}/assets/plugins/datatable/js/dataTables.bootstrap5.min.js"></script>
+    <script src="{{ asset('public/template')}}/assets/js/jquery.min.js"></script>
+    <script src="{{ asset('public/template')}}/assets/plugins/simplebar/js/simplebar.min.js"></script>
+    <script src="{{ asset('public/template')}}/assets/plugins/metismenu/js/metisMenu.min.js"></script>
+    <script src="{{ asset('public/template')}}/assets/plugins/perfect-scrollbar/js/perfect-scrollbar.js"></script>
+    <script src="{{ asset('public/template')}}/assets/plugins/apexcharts-bundle/js/apexcharts.min.js"></script>
+    <script src="{{ asset('public/template')}}/assets/plugins/datatable/js/jquery.dataTables.min.js"></script>
+    <script src="{{ asset('public/template')}}/assets/plugins/datatable/js/dataTables.bootstrap5.min.js"></script>
     <script>
         $(document).ready(function() {
             $('#Transaction-History').DataTable({
@@ -78,18 +78,18 @@
     </script>
 
     <!--app JS-->
-    <script src="{{ asset('template')}}/assets/js/app.js"></script>
+    <script src="{{ asset('public/template')}}/assets/js/app.js"></script>
     <script>
         new PerfectScrollbar('.product-list');
         new PerfectScrollbar('.customers-list');
     </script>
     <!--plugins-->
-    <script src="{{ asset('template')}}/assets/js/jquery.min.js"></script>
-    <script src="{{ asset('template')}}/assets/plugins/simplebar/js/simplebar.min.js"></script>
-    <script src="{{ asset('template')}}/assets/plugins/metismenu/js/metisMenu.min.js"></script>
-    <script src="{{ asset('template')}}/assets/plugins/perfect-scrollbar/js/perfect-scrollbar.js"></script>
-    <script src="{{ asset('template')}}/assets/plugins/datatable/js/jquery.dataTables.min.js"></script>
-    <script src="{{ asset('template')}}/assets/plugins/datatable/js/dataTables.bootstrap5.min.js"></script>
+    <script src="{{ asset('public/template')}}/assets/js/jquery.min.js"></script>
+    <script src="{{ asset('public/template')}}/assets/plugins/simplebar/js/simplebar.min.js"></script>
+    <script src="{{ asset('public/template')}}/assets/plugins/metismenu/js/metisMenu.min.js"></script>
+    <script src="{{ asset('public/template')}}/assets/plugins/perfect-scrollbar/js/perfect-scrollbar.js"></script>
+    <script src="{{ asset('public/template')}}/assets/plugins/datatable/js/jquery.dataTables.min.js"></script>
+    <script src="{{ asset('public/template')}}/assets/plugins/datatable/js/dataTables.bootstrap5.min.js"></script>
 
     <script>
         $(document).ready(function() {
@@ -118,7 +118,7 @@
         });
     </script>
     <!--app JS-->
-    <script src="{{ asset('template')}}assets/js/app.js"></script>
+    <script src="{{ asset('public/template')}}assets/js/app.js"></script>
 </body>
 
 </html>

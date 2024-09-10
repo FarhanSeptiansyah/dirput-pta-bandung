@@ -49,7 +49,7 @@
                         <div class="mb-3">
                             <label>Foto</label>
                             <div>
-                                <img src="{{asset('img/'.$member->foto_user)}}" width="40" height="60" />
+                                <img src="{{asset('public/img/'.$member->foto_user)}}" width="40" height="60" />
                             </div>
                             <label class="mb-2 text-warning mt-2">UPLOAD FOTO</label>
                             <input type="file" class="form-control form-control-sm @error('foto_user') is-invalid @enderror" value="{{$member->foto_user}}" name="foto_user">

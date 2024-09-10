@@ -2,12 +2,12 @@
 
 @section('content')
 
-<div class="panel panel-default container mt-5">
+<div class="panel panel-default container">
 
     @include('layouts.v_deskripsi-trans')
 
     <div class="panel-heading">
-        <h4 class="panel-title mt-5 text-center">
+        <h4 class="panel-title mt-3 text-center">
             UBAH DATA PUTUSAN ANONIMASI
         </h4>
     </div>
@@ -30,37 +30,57 @@
                             <label for="j_perkara">Jenis Perkara</label>
                             <select name="j_perkara" type="text" class="form-control @error('j_perkara') is-invalid @enderror">
                                 <option>{{$dirput->j_perkara}}</option>
-                                <option> Asal Usul Anak </option>
-                                <option> Cerai Gugat </option>
-                                <option> Cerai Talak </option>
-                                <option> Dispensasi Kawin </option>
-                                <option> Ekonomi Syariah </option>
-                                <option> Ganti Rugi terhadap Wali </option>
-                                <option> Hak-hak Bekas Isteri </option>
-                                <option> Harta Bersama </option>
-                                <option> Hibah </option>
-                                <option> Isbath Nikah </option>
-                                <option> Izin Kawin </option>
-                                <option> Izin Poligami </option>
-                                <option> Kelalaian Kewajiban Suami/Isteri </option>
-                                <option> Kewarisan </option>
-                                <option> Lain-lain </option>
-                                <option> Nafkah Anak oleh Ibu </option>
-                                <option> P3HP/Penetapan Ahli Waris </option>
-                                <option> Pembatalan Perkawinan </option>
-                                <option> Pencabutan Kekuasaan Orang Tua </option>
-                                <option> Pencabutan Kekuasaan Wali </option>
-                                <option> Pencegahan Perkawinan </option>
-                                <option> Pengesahan Anak/Pengangkatan Anak </option>
-                                <option> Penguasaan Anak/Hadlonah </option>
-                                <option> Penolakan Kawin Campuran </option>
-                                <option> Penolakan Perkawinan oleh PPN </option>
-                                <option> Penunjukan Orang Lain Sbg Wali </option>
-                                <option> Perwalian </option>
-                                <option> Wakaf </option>
-                                <option> Wali Adhol </option>
-                                <option> Wasiat </option>
-                                <option> Zakat/Infaq/Shodaqoh </option>
+                                <option>Asal Usul Anak</option>
+                                <option>Bantahan Atas Lelang Eksekusi Hak Tanggungan</option>
+                                <option>Cerai Gugat</option>
+                                <option>Cerai Talak</option>
+                                <option>Derden Verzet</option>
+                                <option>Dispensasi Kawin</option>
+                                <option>Ekonomi Syariah</option>
+                                <option>Ganti Rugi terhadap Wali</option>
+                                <option>Gugatan Mahar</option>
+                                <option>Gugatan Nafkah Lampau/Madhiyah</option>
+                                <option>Hak-hak Bekas Isteri</option>
+                                <option>Harta Bersama</option>
+                                <option>Hibah</option>
+                                <option>Isbath Nikah</option>
+                                <option>Izin Kawin</option>
+                                <option>Izin Poligami</option>
+                                <option>Kelalaian Kewajiban Suami/Isteri</option>
+                                <option>Kewarisan</option>
+                                <option>Lain-lain</option>
+                                <option>Nafkah Anak oleh Ibu</option>
+                                <option>P3HP/Penetapan Ahli Waris</option>
+                                <option>Pembatalan Akta Hibah</option>
+                                <option>Pembatalan Akta Perjanjian Kesepakatan Bersama</option>
+                                <option>Pembatalan Isbat Nikah</option>
+                                <option>Pembatalan Penetapan</option>
+                                <option>Pembatalan Penetapan Wali Adhol</option>
+                                <option>Pembatalan Perkawinan</option>
+                                <option>Pembatalan Perwalian</option>
+                                <option>Pembatalan Perwalian</option>
+                                <option>Pembatalan Wali Pengampu</option>
+                                <option>Pembatalan Wasiat</option>
+                                <option>Pencabutan Hak Hadhanah</option>
+                                <option>Pencabutan Kekuasaan Orang Tua</option>
+                                <option>Pencabutan Kekuasaan Wali</option>
+                                <option>Pencegahan Perkawinan</option>
+                                <option>Pengesahan Anak/Pengangkatan Anak</option>
+                                <option>Penguasaan Anak/Hadlonah</option>
+                                <option>Penolakan Kawin Campuran</option>
+                                <option>Penolakan Perkawinan oleh PPN</option>
+                                <option>Penunjukan Orang Lain Sbg Wali</option>
+                                <option>Penyangkalan Wali Nikah</option>
+                                <option>Perbuatan Melawan Hukum</option>
+                                <option>Perlawanan Eksekusi </option>
+                                <option>Perlawanan Eksekusi Hak Tanggungan</option>
+                                <option>Perlawanan Sita</option>
+                                <option>Permohonan Penyangkalan Wali Nikah</option>
+                                <option>Perwalian</option>
+                                <option>Wakaf</option>
+                                <option>Wali Adhol</option>
+                                <option>Wasiat</option>
+                                <option>Zakat/Infaq/Shodaqoh</option>
                             </select>
                             <div id="validationServerUsernameFeedback" class="invalid-feedback text-danger">
                                 @error('j_perkara')

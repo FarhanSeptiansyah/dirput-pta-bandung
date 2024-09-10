@@ -11,19 +11,19 @@
 
 	<title> Login | PTA Bandung</title>
 
-	<link href="{{ asset('template')}}/assets/plugins/simplebar/css/simplebar.css" rel="stylesheet" />
-	<link href="{{ asset('template')}}/assets/plugins/perfect-scrollbar/css/perfect-scrollbar.css" rel="stylesheet" />
-	<link href="{{ asset('template')}}/assets/plugins/metismenu/css/metisMenu.min.css" rel="stylesheet" />
-	<link href="{{ asset('template')}}/assets/plugins/datatable/css/dataTables.bootstrap5.min.css" rel="stylesheet" />
+	<link href="{{ asset('public/template')}}/assets/plugins/simplebar/css/simplebar.css" rel="stylesheet" />
+	<link href="{{ asset('public/template')}}/assets/plugins/perfect-scrollbar/css/perfect-scrollbar.css" rel="stylesheet" />
+	<link href="{{ asset('public/template')}}/assets/plugins/metismenu/css/metisMenu.min.css" rel="stylesheet" />
+	<link href="{{ asset('public/template')}}/assets/plugins/datatable/css/dataTables.bootstrap5.min.css" rel="stylesheet" />
 	<!-- loader-->
-	<link href="{{ asset('template')}}/assets/css/pace.min.css" rel="stylesheet" />
-	<script src="{{ asset('template')}}/assets/js/pace.min.js"></script>
+	<link href="{{ asset('public/template')}}/assets/css/pace.min.css" rel="stylesheet" />
+	<script src="{{ asset('public/template')}}/assets/js/pace.min.js"></script>
 	<!-- Bootstrap CSS -->
-	<link href="{{ asset('template')}}/assets/css/bootstrap.min.css" rel="stylesheet">
-	<link href="{{ asset('template')}}/assets/css/bootstrap-extended.css" rel="stylesheet">
+	<link href="{{ asset('public/template')}}/assets/css/bootstrap.min.css" rel="stylesheet">
+	<link href="{{ asset('public/template')}}/assets/css/bootstrap-extended.css" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
-	<link href="{{ asset('template')}}/assets/css/app.css" rel="stylesheet">
-	<link href="{{ asset('template')}}/assets/css/icons.css" rel="stylesheet">
+	<link href="{{ asset('public/template')}}/assets/css/app.css" rel="stylesheet">
+	<link href="{{ asset('public/template')}}/assets/css/icons.css" rel="stylesheet">
 
 </head>
 
@@ -35,7 +35,7 @@
 				<div class="card-body p-md-5 text-center">
 					<div class="">
 						<a href="#">
-							<img src="{{ asset('template')}}/assets/images/icons/user.png" class="mt-5" width="120" alt="" />
+							<img src="{{ asset('public/template')}}/assets/images/icons/user.png" class="mt-5" width="120" alt="" />
 						</a>
 					</div>
 					<form method="POST" action="{{ route('login') }}">
