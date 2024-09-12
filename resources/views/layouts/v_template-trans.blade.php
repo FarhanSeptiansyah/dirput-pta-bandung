@@ -6,7 +6,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!--favicon-->
-    <link rel="icon" href="{{{ asset('favicon/favicon.ico') }}}" />
+    <link rel="icon" href="{{{ asset('public/favicon/favicon.ico') }}}" />
     <!--plugins-->
 
     <title> {{ $title }} | PTA Bandung</title>
@@ -28,6 +28,7 @@
 </head>
 
 <body class="bg-theme bg-theme3">
+
     <!--wrapper-->
     <div class="wrapper">
         <!--sidebar wrapper -->

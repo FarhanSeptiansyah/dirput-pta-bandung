@@ -8,14 +8,14 @@
     <!--favicon-->
     <link rel="icon" href="{{{ asset('favicon/favicon.ico') }}}" />
     <!-- loader-->
-    <link href="{{ asset('template')}}/assets/css/pace.min.css" rel="stylesheet" />
-    <script src="{{ asset('template')}}/assets/js/pace.min.js"></script>
+    <link href="{{ asset('public/template')}}/assets/css/pace.min.css" rel="stylesheet" />
+    <script src="{{ asset('public/template')}}/assets/js/pace.min.js"></script>
     <!-- Bootstrap CSS -->
-    <link href="{{ asset('template')}}/assets/css/bootstrap.min.css" rel="stylesheet">
-    <link href="{{ asset('template')}}/assets/css/bootstrap-extended.css" rel="stylesheet">
+    <link href="{{ asset('public/template')}}/assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="{{ asset('public/template')}}/assets/css/bootstrap-extended.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
-    <link href="{{ asset('template')}}/assets/css/app.css" rel="stylesheet">
-    <link href="{{ asset('template')}}/assets/css/icons.css" rel="stylesheet">
+    <link href="{{ asset('public/template')}}/assets/css/app.css" rel="stylesheet">
+    <link href="{{ asset('public/template')}}/assets/css/icons.css" rel="stylesheet">
     <title> 404 | PTA Bandung</title>
 </head>
 
@@ -52,10 +52,10 @@
 
 
     <!-- Bootstrap JS -->
-    <script src="{{ asset('template')}}/assets/js/bootstrap.bundle.min.js"></script>
+    <script src="{{ asset('public/template')}}/assets/js/bootstrap.bundle.min.js"></script>
 
     <!--plugins-->
-    <script src="{{ asset('template')}}/assets/js/jquery.min.js"></script>
+    <script src="{{ asset('public/template')}}/assets/js/jquery.min.js"></script>
 
     <script>
         $(".switcher-btn").on("click", function() {
