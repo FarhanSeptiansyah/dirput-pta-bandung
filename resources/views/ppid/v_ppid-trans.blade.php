@@ -23,7 +23,7 @@
                 <div class="card radius-15">
                     <div class="card-body text-center">
                         <div class="p-4 border radius-15">
-                            <img src="{{ asset('template')}}/img/VjhFohQbEkJi1FBfJsWuXXdpiYx4v1nJjSDGvK90.jpg" width="300" height="400" class="rounded-circle shadow" alt="">
+                            <img src="{{ asset('public')}}/img/ioXrjjPu4guREqonFisWjc826TeL2K3NMLk57ocS.jpg" width="300" height="400" class="rounded-circle shadow" alt="">
                             <h5 class="mb-0 mt-5">Rahmat Setiawan, S.H. </h5>
                             <p class="mb-3">Pejabat PPID PTA Bandung</p>
                             <div class="list-inline contacts-social mt-3 mb-3"> <a href="javascript:;" class="list-inline-item bg-light text-white border-0"><i class="bx bxl-facebook"></i></a>
@@ -32,7 +32,7 @@
                                 <a href="javascript:;" class="list-inline-item bg-light text-white border-0"><i class="bx bxl-linkedin"></i></a>
                             </div>
                             <div class="d-grid"> <a href="#" class="btn btn-light radius-15">Contact Me</a>
-                                <div class="d-grid"> <a href="/dirput-pta-bandung" class="btn btn-light radius-15 mt-3">Back to Home</a>
+                                <div class="d-grid"> <a href="/" class="btn btn-light radius-15 mt-3">Back to Home</a>
                                 </div>
                             </div>
                         </div>

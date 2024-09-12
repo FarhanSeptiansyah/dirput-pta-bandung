@@ -69,7 +69,7 @@
 					<tbody>
 						@foreach ($dirput as $data)
 						<tr>
-							<td class="text-start">{{$loop->iteration}}</td>
+							<td class="text-center">{{$loop->iteration}}</td>
 							<td class="text-start"><span class="btn btn-sm btn-outline-light px-3 mb-2">{{ $data->no_banding }}</span></td>
 							<td class="text-start">
 								@if($data->j_perkara=="")

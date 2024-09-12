@@ -38,8 +38,15 @@
         <div class="card-body">
             <div class="table-responsive">
                 <td class="text-center" style="font-size: 5px;">
+                    @if(Auth::user()->role==='admin')
                     <a href="/home" class="btn btn-sm btn-outline-danger px-3 mb-2"></i>Kembali</a>
                     <a href="/dirput-pta/admin/member/add" class="btn btn-sm btn-outline-light px-3 mb-2"></i>Tambah User</a>
+                    @elseif(Auth::user()->role==='staf')
+                    <a href="/home" class="btn btn-sm btn-outline-danger px-3 mb-2"></i>Kembali</a>
+                    @elseif(Auth::user()->role==='member')
+
+                    @endif
+                </td>
                 </td>
                 <table class="table table-bordered">
                     <thead>
@@ -65,9 +72,9 @@
                     @foreach ($member as $data)
                     <tr>
                         <td class="text-center" scope="row">{{$loop->iteration}}</td>
-                        <td class="text-center"> <img src="{{ asset('/img/'.$data->foto_user) }}" width="30" height="40" alt="" title=""></td>
+                        <td class="text-center"> <img src="{{ asset('public/img/'.$data->foto_user) }}" width="30" height="40" alt="" title=""></td>
                         <td>{{ $data->name }}</td>
-                        <td>{{ $data->username }}</td>
+                        <td class="text-center">{{ $data->username }}</td>
                         <td class="text-center">
                             {{ $data->role }}
                         </td>
@@ -78,9 +85,9 @@
                             <button type="button" class="btn btn-sm btn-outline-danger px-3" data-bs-toggle="modal" data-bs-target="#deleteModal{{ $data->id }}">
                                 hapus</button>
                             @elseif(Auth::user()->role==='staf')
-                            <a href="/dirput-pta/admin/member/ppid" class="btn btn-sm btn-outline-warning px-3">Hub admin</a>
+                            <a href="/dirput-pta/admin/member/ppid" class="btn btn-sm btn-outline-warning px-3">Login admin</a>
                             @elseif(Auth::user()->role==='member')
-                            <a href="/dirput-pta/admin/member/ppid" class="btn btn-sm btn-outline-warning px-3">Hub admin</a>
+                            <a href="/dirput-pta/admin/member/ppid" class="btn btn-sm btn-outline-warning px-3">Login admin</a>
                             @endif
                         </td>
                     </tr>
