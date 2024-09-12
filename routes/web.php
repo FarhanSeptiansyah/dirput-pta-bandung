@@ -24,7 +24,7 @@ Route::middleware(['guest'])->group(function () {
 
 // Show Home
 Route::get('/home', [DirputController::class, 'index'])->name('index');
-Route::get('/home', [DirputController::class, 'showLoginForm'])->name('showLoginForm');
+Route::get('/login', [DirputController::class, 'showLoginForm'])->name('showLoginForm');
 
 //Akses admin
 Route::middleware(['admin'])->group(function () {
