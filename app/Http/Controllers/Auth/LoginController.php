@@ -42,9 +42,4 @@ class LoginController extends Controller
     {
         return view('/login/v_login-trans');
     }
-
-    public function username()
-    {
-        return 'username';
-    }
 }
