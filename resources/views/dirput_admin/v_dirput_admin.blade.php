@@ -93,7 +93,7 @@
 								@elseif($data->putusan=="0000-00-00")
 								<i class="lni lni-ban text-danger"></i>
 								@else
-								<a href="/public/dirput-pta/dirput/{{$data->putusan}}" class="btn btn-sm btn-outline-light px-3 mb-2" target="_blank">
+								<a href="public/dirput-pta/dirput/{{$data->putusan}}" class="btn btn-sm btn-outline-light px-3 mb-2" target="_blank">
 									<i class="lni lni-cloud-download"></i>
 									<span>download</span>
 								</a>

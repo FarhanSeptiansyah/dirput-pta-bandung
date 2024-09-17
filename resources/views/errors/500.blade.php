@@ -8,21 +8,21 @@
   <!--favicon-->
   <link rel="icon" href="{{{ asset('favicon/favicon.ico') }}}" type="image/png" />
   <!-- loader-->
-  <link href="{{ asset('public/template')}}/assets/css/pace.min.css" rel="stylesheet" />
-  <script src="{{ asset('public/template')}}/assets/js/pace.min.js"></script>
+  <link href="{{ asset('template')}}/assets/css/pace.min.css" rel="stylesheet" />
+  <script src="{{ asset('template')}}/assets/js/pace.min.js"></script>
   <!-- Bootstrap CSS -->
-  <link href="{{ asset('public/template')}}/assets/css/bootstrap.min.css" rel="stylesheet">
-  <link href="{{ asset('public/template')}}/assets/css/bootstrap-extended.css" rel="stylesheet">
+  <link href="{{ asset('template')}}/assets/css/bootstrap.min.css" rel="stylesheet">
+  <link href="{{ asset('template')}}/assets/css/bootstrap-extended.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
-  <link href="{{ asset('public/template')}}/assets/css/app.css" rel="stylesheet">
-  <link href="{{ asset('public/template')}}/assets/css/icons.css" rel="stylesheet">
-  <title>Dashtrans - Bootstrap5 Admin Template</title>
+  <link href="{{ asset('template')}}/assets/css/app.css" rel="stylesheet">
+  <link href="{{ asset('template')}}/assets/css/icons.css" rel="stylesheet">
+  <title> 500 | PTA Bandung</title>
 </head>
 
 <body class="bg-theme bg-theme3">
   <!-- wrapper -->
   <div class="wrapper">
-    <div class="error-404 d-flex align-items-center justify-content-center">
+    <div class="error-500 d-flex align-items-center justify-content-center">
       <div class="container">
         <div class="card">
           <div class="row g-0">
@@ -38,7 +38,7 @@
               </div>
             </div>
             <div class="col-xl-7">
-              <img src="{{ asset('public/template')}}/assets/images/errors-images/505-error.png" class="img-fluid" alt="">
+              <img src="{{ asset('template')}}/assets/images/errors-images/505-error.png" class="img-fluid" alt="">
             </div>
           </div>
           <!--end row-->
@@ -51,10 +51,10 @@
 
 
   <!-- Bootstrap JS -->
-  <script src="{{ asset('public/template')}}/assets/js/bootstrap.bundle.min.js"></script>
+  <script src="{{ asset('template')}}/assets/js/bootstrap.bundle.min.js"></script>
 
   <!--plugins-->
-  <script src="{{ asset('public/template')}}/assets/js/jquery.min.js"></script>
+  <script src="{{ asset('template')}}/assets/js/jquery.min.js"></script>
 
   <script>
     $(".switcher-btn").on("click", function() {

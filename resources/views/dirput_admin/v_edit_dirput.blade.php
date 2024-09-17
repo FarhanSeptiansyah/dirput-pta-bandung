@@ -58,7 +58,6 @@
                                 <option>Pembatalan Penetapan Wali Adhol</option>
                                 <option>Pembatalan Perkawinan</option>
                                 <option>Pembatalan Perwalian</option>
-                                <option>Pembatalan Perwalian</option>
                                 <option>Pembatalan Wali Pengampu</option>
                                 <option>Pembatalan Wasiat</option>
                                 <option>Pencabutan Hak Hadhanah</option>

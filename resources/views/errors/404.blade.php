@@ -6,7 +6,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!--favicon-->
-    <link rel="icon" href="{{{ asset('favicon/favicon.ico') }}}" />
+    <link rel="icon" href="{{{ asset('public/favicon/favicon.ico') }}}" />
     <!-- loader-->
     <link href="{{ asset('public/template')}}/assets/css/pace.min.css" rel="stylesheet" />
     <script src="{{ asset('public/template')}}/assets/js/pace.min.js"></script>
